@@ -4,4 +4,4 @@ pandas
 Pillow
 openpyxl
 scikit-learn
-
+numpy
