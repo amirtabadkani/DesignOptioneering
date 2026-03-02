@@ -1,6 +1,7 @@
-plotly==5.14.1
-streamlit==1.24.0
+plotly
+streamlit
 pandas
 Pillow
 openpyxl
 scikit-learn
+
