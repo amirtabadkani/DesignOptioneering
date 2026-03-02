@@ -10,7 +10,7 @@ from sklearn.linear_model import Ridge
 
 import numpy as np
 
-st.set_page_config(page_title='EnCO2 Analytical Dashboard', layout='wide')
+st.set_page_config(page_title='Energy & Carbon Intelligence Hub', layout='wide')
 
 hide_st_style = """
                 <style>
@@ -29,7 +29,7 @@ chep_co2 = pd.read_csv('./data/CO2.csv')
 #epic = pd.DataFrame(pd.read_excel(r'C:\Users\atabadkani\Streamlit Apps\CHEP\data\EPiC.xlsx'))
 #chep_co2 = pd.read_csv(r'C:\Users\atabadkani\Streamlit Apps\CHEP\data\CO2.csv')
 
-st.title("EnCO2 Analytical Dashboard")
+st.title("Energy & Carbon Intelligence Hub")
 
 st.markdown('---')
 st.header(":red[**BUILDING PERFORMANCE**]")
@@ -983,4 +983,5 @@ with st.expander('Statistical WoL Carbon Correlations (HEAT MAP)'):
   st.plotly_chart(CHEP_co2_CORR_HTM, use_container_width=True)
   
   st.markdown('**:red[Note:]** Numbers represent the magnitude level of variables against each other, and Negative Values mean the input impacts the target negatively.')
+
 
