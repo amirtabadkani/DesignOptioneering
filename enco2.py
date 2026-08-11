@@ -84,14 +84,14 @@ with st.container():
         ENERGY = CHEP_en_RESULT['Energy Cost (AU$/yr)']
         PATIENT_NORTH_OT = CHEP_en_RESULT['OT26% - Patient North']
         PATIENT_SOUTH_OT = CHEP_en_RESULT['OT26% - Patient South']
-        image = CHEP_en_RESULT['img']
+        IMAGE = CHEP_en_RESULT['img']
         EUI_REF = CHEP_en_RESULT['EUI Saved(-)Wasted(+)']
         ELEC_REF = CHEP_en_RESULT['REF_ELECp']
         CLG_REF = CHEP_en_RESULT['REF_CLGp']
         DA_REF = CHEP_en_RESULT['REF_DA']
         UDI_REF = CHEP_en_RESULT['REF_ExcDA']
         
-        return EUI_METRIC, ELEC_P, CLG_P, AVE_DA, AVE_UDI, ENERGY, PATIENT_NORTH_OT, PATIENT_SOUTH_OT, image,EUI_REF,ELEC_REF,CLG_REF,DA_REF,UDI_REF
+        return EUI_METRIC, ELEC_P, CLG_P, AVE_DA, AVE_UDI, ENERGY, PATIENT_NORTH_OT, PATIENT_SOUTH_OT, IMAGE,EUI_REF,ELEC_REF,CLG_REF,DA_REF,UDI_REF
             
         
     cols = st.columns([0.1,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.1])
