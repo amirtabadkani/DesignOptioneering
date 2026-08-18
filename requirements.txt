@@ -1,5 +1,5 @@
 plotly
-streamlit==1.32.0
+streamlit==1.24.0
 pandas
 Pillow
 openpyxl
