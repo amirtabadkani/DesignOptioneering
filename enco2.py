@@ -226,11 +226,11 @@ with st.container():
     with col1:
         ""
     with col2:
-        st.image(loadImages()[0], caption='Selected Design Iteration', width = "stretch")
+        st.image(loadImages()[0], caption='Selected Design Iteration', use_container_width = False)
     with col3:
         ""
     with col4:
-        st.image(loadImages()[1], caption='Reference Case', width = "stretch")
+        st.image(loadImages()[1], caption='Reference Case',use_container_width = False)
     
     
     st.subheader("**Design Inputs vs. Operational Building Performance**")
