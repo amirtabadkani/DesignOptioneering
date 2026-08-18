@@ -48,7 +48,7 @@ REF_glare = 3.76
 CHEP_en['Energy Cost (AU$/yr)'] = CHEP_en['EUI (kWh/m2)']*Floor_area*en_price
 
 with st.sidebar:
-    st.image('./data/dma.png',use_container_width=True,output_format='PNG',)
+    st.image('./data/dma.png',width=True,output_format='PNG',)
     st.markdown('_This tool is only built for demonstration purpose for the client to better understand the impact of different design variables on both building thermal and decabornization performance located in North Queensland, Australia. Results should be interpreted as comparative only, and do not aim to predict actual building performance._')
 
     
@@ -128,7 +128,7 @@ with st.container():
     
     data_ref_eui = {'WWR':'40%','Shade Depth':'No Shades','U-Value/SHGC/VLT': '3.91 / 0.30 / 0.38', 'EXT Walls':'R1.4', 'Roof/Ceiling':'R3.7', 'INT Walls':'R1.4'}
     REF_DF_eui = pd.DataFrame([data_ref_eui], index = ['Reference Case'])
-    st.dataframe(REF_DF_eui, use_container_width= True)
+    st.dataframe(REF_DF_eui, width= True)
     
     
     # cols = st.columns(7)
@@ -162,7 +162,7 @@ with st.container():
         title = {'text': "EUI Performance",'font':{'family':'Arial'}}
         ))
 
-        st.plotly_chart(eui_performance, use_container_width=True)
+        st.plotly_chart(eui_performance, width=True)
     
     with cols[1]:
         elec_performance = go.Figure(go.Indicator(
@@ -174,7 +174,7 @@ with st.container():
         title = {'text': "ELECp Performance",'font':{'family':'Arial'}}
         ))
     
-        st.plotly_chart(elec_performance, use_container_width=True)
+        st.plotly_chart(elec_performance, width=True)
         
     with cols[2]:
         clg_performance = go.Figure(go.Indicator(
@@ -186,7 +186,7 @@ with st.container():
         title = {'text': "CLGp Performance",'font':{'family':'Arial'}}
         ))
     
-        st.plotly_chart(clg_performance,  use_container_width=True)
+        st.plotly_chart(clg_performance,  width=True)
     
     with cols[3]:
         DA_performance = go.Figure(go.Indicator(
@@ -198,7 +198,7 @@ with st.container():
         title = {'text': "Daylight Level",'font':{'family':'Arial'}}
         ))
     
-        st.plotly_chart(DA_performance, use_container_width=True)
+        st.plotly_chart(DA_performance, width=True)
     
     with cols[4]:
         glare_performance = go.Figure(go.Indicator(
@@ -210,7 +210,7 @@ with st.container():
         title = {'text': "Discomfort Glare Level",'font':{'family':'Arial'}}
         ))
     
-        st.plotly_chart(glare_performance, use_container_width=True)
+        st.plotly_chart(glare_performance, width=True)
   
         
     def loadImages():
@@ -226,11 +226,11 @@ with st.container():
     with col1:
         ""
     with col2:
-        st.image(loadImages()[0], caption='Selected Design Iteration', use_column_width = False)
+        st.image(loadImages()[0], caption='Selected Design Iteration', width = "stretch")
     with col3:
         ""
     with col4:
-        st.image(loadImages()[1], caption='Reference Case', use_column_width = False)
+        st.image(loadImages()[1], caption='Reference Case', width = "stretch")
     
     
     st.subheader("**Design Inputs vs. Operational Building Performance**")
@@ -253,7 +253,7 @@ with st.container():
                                 margin=dict(l=100, r=100))
     # chep_pcm.update_traces(line_colorbar_tickangle=45)
     
-    st.plotly_chart(chep_pcm, use_container_width=True)
+    st.plotly_chart(chep_pcm, width=True)
 
 with st.expander('Statistical Building Performance Correlations (Box Plots)'):
  
@@ -267,15 +267,15 @@ with st.expander('Statistical Building Performance Correlations (Box Plots)'):
     cols = st.columns(5)
     
     with cols[0]:
-        st.plotly_chart(chep_bx_01, use_container_width=True)
+        st.plotly_chart(chep_bx_01, width=True)
     with cols[1]:
-        st.plotly_chart(chep_bx_02, use_container_width=True)
+        st.plotly_chart(chep_bx_02, width=True)
     with cols[2]:
-        st.plotly_chart(chep_bx_03, use_container_width=True)
+        st.plotly_chart(chep_bx_03, width=True)
     with cols[3]:
-        st.plotly_chart(chep_bx_04, use_container_width=True)
+        st.plotly_chart(chep_bx_04, width=True)
     with cols[4]:
-        st.plotly_chart(chep_bx_05, use_container_width=True)
+        st.plotly_chart(chep_bx_05, width=True)
 
     chep_bx_07 = px.box(CHEP_en, CHEP_en["WWR-NS"], CHEP_en["Daylight Autonomy"], "WWR-NS", notched = True)
     chep_bx_08 = px.box(CHEP_en, CHEP_en["WWR-EW"], CHEP_en["Daylight Autonomy"], "WWR-EW", notched = True)
@@ -286,15 +286,15 @@ with st.expander('Statistical Building Performance Correlations (Box Plots)'):
     cols = st.columns(5)
     
     with cols[0]:
-        st.plotly_chart(chep_bx_07, use_container_width=True)
+        st.plotly_chart(chep_bx_07, width=True)
     with cols[1]:
-        st.plotly_chart(chep_bx_08, use_container_width=True)
+        st.plotly_chart(chep_bx_08, width=True)
     with cols[2]:
-        st.plotly_chart(chep_bx_09, use_container_width=True)
+        st.plotly_chart(chep_bx_09, width=True)
     with cols[3]:
-        st.plotly_chart(chep_bx_10, use_container_width=True)
+        st.plotly_chart(chep_bx_10, width=True)
     with cols[4]:
-        st.plotly_chart(chep_bx_11, use_container_width=True)
+        st.plotly_chart(chep_bx_11, width=True)
         
 
     chep_bx_13 = px.box(CHEP_en, CHEP_en["WWR-NS"], CHEP_en["Excessive Daylight"], "WWR-NS", notched = True)
@@ -306,15 +306,15 @@ with st.expander('Statistical Building Performance Correlations (Box Plots)'):
     cols = st.columns(5)
     
     with cols[0]:
-        st.plotly_chart(chep_bx_13, use_container_width=True)
+        st.plotly_chart(chep_bx_13, width=True)
     with cols[1]:
-        st.plotly_chart(chep_bx_14, use_container_width=True)
+        st.plotly_chart(chep_bx_14, width=True)
     with cols[2]:
-        st.plotly_chart(chep_bx_15, use_container_width=True)
+        st.plotly_chart(chep_bx_15, width=True)
     with cols[3]:
-        st.plotly_chart(chep_bx_16, use_container_width=True)
+        st.plotly_chart(chep_bx_16, width=True)
     with cols[4]:
-        st.plotly_chart(chep_bx_17, use_container_width=True)
+        st.plotly_chart(chep_bx_17, width=True)
 
 def get_index(df) -> dict:
         dict_ = {df['Version: EPiC Database 2019'].iloc[i]: i for i in range(0, len(df['Version: EPiC Database 2019']))}
@@ -330,7 +330,7 @@ with st.expander('Statistical Building Performance Correlations (Heat Map)'):
   CHEP_CORR_HTM = px.imshow(round(CHEP_ridge.corr(),2),text_auto=True,color_continuous_scale='thermal',  width = 1000, height = 1000)
   CHEP_CORR_HTM.update_traces(textfont_size=15)
   
-  st.plotly_chart(CHEP_CORR_HTM, use_container_width=True)
+  st.plotly_chart(CHEP_CORR_HTM, width=True)
   
   st.markdown('**:red[Note:]** Numbers represent the magnitude level of variables against each other, and Negative Values mean the input impacts the target negatively.')
 
@@ -352,7 +352,7 @@ ridge_en.fit(X_train_en,y_train_en)
 
 CHEP_en_cdf = pd.DataFrame(np.transpose(ridge_en.coef_),X.columns,columns=[['EUI (kWh/m2)', 'ELECp (W/m2)', 'CLGp (W/m2)','OT26% - Patient North', 'OT26% - Patient South','EUI Saved(-)Wasted(+)','Energy Cost (AU$/yr)']])
 
-# st.dataframe(CHEP_en_cdf, use_container_width=True)
+# st.dataframe(CHEP_en_cdf, width=True)
 
 
 #Daylight Targets ((((WIP))))
@@ -434,7 +434,7 @@ with cols[3]:
         yaxis_title="Predicted vs. Reference Building Performance"
     ))
     
-    st.plotly_chart(predicted_bar,use_container_width=True)
+    st.plotly_chart(predicted_bar,width=True)
             
 with cols[4]:
     ""
@@ -752,7 +752,7 @@ with st.container():
                                 plot_bgcolor="white",
                                 margin=dict(l=100, r=100))
          
-    st.plotly_chart(chep_pcm_co, use_container_width=True)
+    st.plotly_chart(chep_pcm_co, width=True)
 
 #REFERENCE UPFRONT CALCS
 #-------------------------------------------------------------------------------------------------------------------------------------
@@ -846,7 +846,7 @@ st.markdown(":red[**_Whole of Life Performance:_**] WoL here includes the carbon
 
 with st.container():
     
-    st.dataframe(REF_DF, use_container_width=True)
+    st.dataframe(REF_DF, width=True)
     
     
     cols = st.columns([0.05,3,0.5,3,0.05])
@@ -860,7 +860,7 @@ with st.container():
                               names =['Upfront Carbon', 'Operational Carbon'], values = [Proposed_Upfront_CO2,Proposed_Opr_CO2])
         chep_pie_co2.update_traces(textposition='inside', textinfo='percent+label')
         chep_pie_co2.update_layout(title_text='Proposed Case')
-        st.plotly_chart(chep_pie_co2,use_container_width=True)
+        st.plotly_chart(chep_pie_co2,width=True)
     with cols[2]:
         ""
     with cols[3]:
@@ -873,7 +873,7 @@ with st.container():
         Wol_scenarios.set_index(2,inplace = True)
         Wol_scenarios = px.line(Wol_scenarios, labels = {'index':'Years', 'value':'Carbon (KgCO2e)', '2':''}, markers = True)
         Wol_scenarios.update_layout(title_text='Carbon Impact')
-        st.plotly_chart(Wol_scenarios, use_container_width=True)
+        st.plotly_chart(Wol_scenarios, width=True)
     
     with cols[4]:
         ""       
@@ -890,7 +890,7 @@ with st.container():
         chep_bar_CO2_contr.update_traces(marker_line_width=1.5, opacity=0.95)
         chep_bar_CO2_contr.update_layout(title_text='Envelope Contributions to Upfront CO2 (Proposed Selection) ')
     
-        st.plotly_chart(chep_bar_CO2_contr,use_container_width=True)
+        st.plotly_chart(chep_bar_CO2_contr,width=True)
         
     with cols[1]:
         ""
@@ -905,7 +905,7 @@ with st.container():
         chep_bar_CO2.update_traces(marker_line_width=1.5, opacity=0.95)
         chep_bar_CO2.update_layout(title_text='Material Contributions to Upfront CO2 (Proposed Selection)')
     
-        st.plotly_chart(chep_bar_CO2,use_container_width=True)
+        st.plotly_chart(chep_bar_CO2,width=True)
         
     with cols[3]:
         ""
@@ -922,7 +922,7 @@ with st.container():
         chep_bar_CO2_DtS.update_traces(marker_line_width=1.5, opacity=0.75)
         chep_bar_CO2_DtS.update_layout(title_text='Proposed Selection vs. Reference Case')
         
-        st.plotly_chart(chep_bar_CO2_DtS,use_container_width=True)
+        st.plotly_chart(chep_bar_CO2_DtS,width=True)
         
         
 #Box Plots
@@ -937,15 +937,15 @@ with st.expander('Statistical Upfront/WoL Carbon Correlations (Box Plots)'):
     cols = st.columns(5)
     
     with cols[0]:
-        st.plotly_chart(chep_bx_19, use_container_width=True)
+        st.plotly_chart(chep_bx_19, width=True)
     with cols[1]:
-        st.plotly_chart(chep_bx_20, use_container_width=True)
+        st.plotly_chart(chep_bx_20, width=True)
     with cols[2]:
-        st.plotly_chart(chep_bx_21, use_container_width=True)
+        st.plotly_chart(chep_bx_21, width=True)
     with cols[3]:
-        st.plotly_chart(chep_bx_22, use_container_width=True)
+        st.plotly_chart(chep_bx_22, width=True)
     with cols[4]:
-        st.plotly_chart(chep_bx_23, use_container_width=True)
+        st.plotly_chart(chep_bx_23, width=True)
     
     
     chep_bx_25 = px.box(CHEP_co2, CHEP_co2["WWR-NS"], CHEP_co2['WoL (KgCO2e)'], "WWR-NS", notched = True)
@@ -957,15 +957,15 @@ with st.expander('Statistical Upfront/WoL Carbon Correlations (Box Plots)'):
     cols = st.columns(5)
     
     with cols[0]:
-        st.plotly_chart(chep_bx_25, use_container_width=True)
+        st.plotly_chart(chep_bx_25, width=True)
     with cols[1]:
-        st.plotly_chart(chep_bx_26, use_container_width=True)
+        st.plotly_chart(chep_bx_26, width=True)
     with cols[2]:
-        st.plotly_chart(chep_bx_27, use_container_width=True)
+        st.plotly_chart(chep_bx_27, width=True)
     with cols[3]:
-        st.plotly_chart(chep_bx_28, use_container_width=True)
+        st.plotly_chart(chep_bx_28, width=True)
     with cols[4]:
-        st.plotly_chart(chep_bx_29, use_container_width=True)
+        st.plotly_chart(chep_bx_29, width=True)
         
         
 #Correlations
@@ -980,7 +980,7 @@ with st.expander('Statistical WoL Carbon Correlations (HEAT MAP)'):
   CHEP_co2_CORR_HTM = px.imshow(round(CHEP_co2_lm.corr(),2),text_auto=True,color_continuous_scale='greens',  width = 1000, height = 1000)
   CHEP_co2_CORR_HTM.update_traces(textfont_size=15)
   
-  st.plotly_chart(CHEP_co2_CORR_HTM, use_container_width=True)
+  st.plotly_chart(CHEP_co2_CORR_HTM, width=True)
   
   st.markdown('**:red[Note:]** Numbers represent the magnitude level of variables against each other, and Negative Values mean the input impacts the target negatively.')
 
