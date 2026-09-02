@@ -14,6 +14,43 @@ st.set_page_config(page_title='Energy & Carbon Intelligence Hub', layout='wide')
 
 hide_st_style = """
                 <style>
+                html, body, [data-testid="stAppViewContainer"], [data-testid="stSidebar"],
+                [data-testid="stHeader"], .stApp, .stMarkdown, .stTextInput,
+                .stNumberInput, .stSelectbox, .stMultiSelect, .stButton, .stCaption,
+                button, input, textarea, select,
+                h1, h2, h3, h4, h5, h6,
+                [data-testid="stTitle"],
+                [data-testid="stHeader"],
+                [data-testid="stMarkdownContainer"] h1,
+                [data-testid="stMarkdownContainer"] h2,
+                [data-testid="stMarkdownContainer"] h3,
+                [data-testid="stMarkdownContainer"] h4,
+                [data-testid="stMarkdownContainer"] h5,
+                [data-testid="stMarkdownContainer"] h6 {
+                    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif !important;
+                }
+                [data-testid="stSidebar"] {
+                    background-color: #333333 !important;
+                    color: #ffffff !important;
+                }
+                [data-testid="stSidebar"] * {
+                    color: #ffffff !important;
+                }
+                /* Keep widget values black while retaining white sidebar labels. */
+                [data-testid="stTextInput"] input,
+                [data-testid="stNumberInput"] input,
+                [data-testid="stTextArea"] textarea,
+                [data-testid="stSelectbox"] [data-baseweb="select"] *,
+                [data-testid="stMultiSelect"] [data-baseweb="select"] * {
+                    color: #000000 !important;
+                    -webkit-text-fill-color: #000000 !important;
+                }
+                [data-testid="stFileUploader"] button,
+                [data-testid="stFileUploader"] button span,
+                [data-testid="stTitle"] h1 {
+                    color: #000000 !important;
+                    -webkit-text-fill-color: #000000 !important;
+                }
                 #MainMenu {visibility: hidden;}
                 footer {visibility: hidden;}
                 </style>
@@ -48,7 +85,7 @@ REF_glare = 3.76
 CHEP_en['Energy Cost (AU$/yr)'] = CHEP_en['EUI (kWh/m2)']*Floor_area*en_price
 
 with st.sidebar:
-    st.image('https://dmaengineers.com.au/wp-content/uploads/2022/08/dma-new-logo.png',use_container_width=True,output_format='PNG',)
+    st.image('C:\\Users\\amirt\\OneDrive - DMA Engineers\\DMA-Sustainability\\DesignAutomation\\StreamlitApps\\Dashboards\\EnCO2\\img\\DMA_white.png',use_container_width=True,output_format='PNG')
     st.markdown('_This tool is only built for demonstration purpose for the client to better understand the impact of different design variables on both building thermal and decabornization performance located in North Queensland, Australia. Results should be interpreted as comparative only, and do not aim to predict actual building performance._')
 
     
