@@ -85,7 +85,7 @@ REF_glare = 3.76
 CHEP_en['Energy Cost (AU$/yr)'] = CHEP_en['EUI (kWh/m2)']*Floor_area*en_price
 
 with st.sidebar:
-    st.image('C:\\Users\\amirt\\OneDrive - DMA Engineers\\DMA-Sustainability\\DesignAutomation\\StreamlitApps\\Dashboards\\EnCO2\\img\\DMA_white.png',use_container_width=True,output_format='PNG')
+    st.image('.data/img/DMA_white.png',use_container_width=True,output_format='PNG')
     st.markdown('_This tool is only built for demonstration purpose for the client to better understand the impact of different design variables on both building thermal and decabornization performance located in North Queensland, Australia. Results should be interpreted as comparative only, and do not aim to predict actual building performance._')
 
     
