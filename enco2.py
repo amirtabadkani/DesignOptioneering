@@ -73,15 +73,19 @@ hide_st_style = """
                     background-color: #cc4444 !important;
                     border-radius: 0.5rem !important;
                     padding: 0.5rem 0.75rem !important;
-                    color: #000000 !important;
+                    color: #ffffff !important;
+                    -webkit-text-fill-color: #ffffff !important;
                 }
                 div[data-testid="stExpander"] summary:hover {
                     background-color: #e5e5e5 !important;
+                    color: #000000 !important;
+                    -webkit-text-fill-color: #000000 !important;
                 }
                 #MainMenu {visibility: hidden;}
                 footer {visibility: hidden;}
                 </style>
                 """
+
 st.markdown(hide_st_style, unsafe_allow_html= True)
 
 
