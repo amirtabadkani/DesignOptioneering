@@ -33,7 +33,17 @@ hide_st_style = """
                     background-color: #333333 !important;
                     color: #ffffff !important;
                 }
-                [data-testid="stSidebar"] * {
+                [data-testid="stSidebar"] p,
+                [data-testid="stSidebar"] span,
+                [data-testid="stSidebar"] label,
+                [data-testid="stSidebar"] li,
+                [data-testid="stSidebar"] h1,
+                [data-testid="stSidebar"] h2,
+                [data-testid="stSidebar"] h3,
+                [data-testid="stSidebar"] h4,
+                [data-testid="stSidebar"] h5,
+                [data-testid="stSidebar"] h6,
+                [data-testid="stSidebar"] div {
                     color: #ffffff !important;
                 }
                 /* Keep widget values black while retaining white sidebar labels. */
@@ -41,9 +51,17 @@ hide_st_style = """
                 [data-testid="stNumberInput"] input,
                 [data-testid="stTextArea"] textarea,
                 [data-testid="stSelectbox"] [data-baseweb="select"] *,
-                [data-testid="stMultiSelect"] [data-baseweb="select"] * {
+                [data-testid="stMultiSelect"] [data-baseweb="select"] *,
+                [data-testid="stSelectbox"] [role="listbox"] *,
+                [data-testid="stSelectbox"] [role="option"] *,
+                [data-testid="stSelectbox"] [data-baseweb="popover"] * {
                     color: #000000 !important;
                     -webkit-text-fill-color: #000000 !important;
+                }
+                [data-testid="stSelectbox"] [role="option"],
+                [data-testid="stMultiSelect"] [role="option"] {
+                    background-color: #ffffff !important;
+                    color: #000000 !important;
                 }
                 [data-testid="stFileUploader"] button,
                 [data-testid="stFileUploader"] button span,
