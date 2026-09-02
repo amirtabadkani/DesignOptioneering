@@ -51,6 +51,15 @@ hide_st_style = """
                     color: #000000 !important;
                     -webkit-text-fill-color: #000000 !important;
                 }
+                div[data-testid="stExpander"] summary {
+                    background-color: #cc4444 !important;
+                    border-radius: 0.5rem !important;
+                    padding: 0.5rem 0.75rem !important;
+                    color: #000000 !important;
+                }
+                div[data-testid="stExpander"] summary:hover {
+                    background-color: #e5e5e5 !important;
+                }
                 #MainMenu {visibility: hidden;}
                 footer {visibility: hidden;}
                 </style>
